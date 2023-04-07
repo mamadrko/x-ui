@@ -126,9 +126,9 @@ func (j *StatsNotifyJob) UserLoginNotify(username string, ip string, time string
 		return
 	}
 	if status == LoginSuccess {
-		msg = fmt.Sprintf("Successfully logged-in to the panel\r\nHostname:%s\r\n", name)
+		msg = fmt.Sprintf("کاربر با موفقیت وارد سرور شد\r\nHostname:%s\r\n", name)
 	} else if status == LoginFail {
-		msg = fmt.Sprintf("Login to the panel was unsuccessful\r\nHostname:%s\r\n", name)
+		msg = fmt.Sprintf("کاربر نتوانست وارد سرور بشه\r\nHostname:%s\r\n", name)
 	}
 	msg += fmt.Sprintf("Time:%s\r\n", time)
 	msg += fmt.Sprintf("Username:%s\r\n", username)
@@ -201,7 +201,7 @@ func (j *StatsNotifyJob) OnReceive() *StatsNotifyJob {
             msg.Text = "What you need?"
 			msg.ReplyMarkup = numericKeyboard
         case "start":
-            msg.Text = "Hi :) \n What you need?"
+            msg.Text = "سلامم \n به بات ایگل تیم خوش امدید"
 			msg.ReplyMarkup = numericKeyboard
 
         case "status":
